@@ -21,7 +21,6 @@ docker run \
     --read-only \
     -v "$RUN_BOX":/var/box \
     -w /var/box \
-    --name "ssit/ide-worker-c" \
     bash -c "/bin/compile.sh && /bin/run.sh"
 
 ls -lh "${RUN_BOX}"
