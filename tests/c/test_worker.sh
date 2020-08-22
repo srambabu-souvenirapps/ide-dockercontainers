@@ -18,9 +18,9 @@ docker run \
     --memory="100m" \
     --ulimit nofile=64:64 \
     --rm \
-    --read-only \
     -v "$RUN_BOX":/var/box \
     -w /var/box \
+    --name "ssit/ide-worker-c" \
     bash -c "/bin/compile.sh && /bin/run.sh"
 
 ls -lh "${RUN_BOX}"
